@@ -21,6 +21,7 @@ const Navbar = () => {
   const [hovered, setHovered] = useState(false);
   const [expertiseHovered, setExpertiseHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hoveredPath, setHoveredPath] = useState(null);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -29,27 +30,92 @@ const Navbar = () => {
     setExpertiseHovered(false);
   };
 
+  const handleLinkHover = (path) => {
+    setHoveredPath(path);
+  };
+
+  const handleLinkLeave = () => {
+    setHoveredPath(null);
+  };
+
   return (
     <div className="relative z-50">
       {/* Navbar */}
       <div className="navbar bg-transparent text-[#0C9DCA] px-4 md:px-10">
         <div className="flex-1">
+          {/* Light mode logo */}
           <img
-            src="https://i.ibb.co/gLbRZTVN/305971129-491192423017638-8336823414892035180-n.jpg"
-            className="h-14"
+            src="https://i.ibb.co.com/8ggGwHPk/logo.png"
+            className="h-20 dark:hidden"
             alt="Company Logo"
           />
+          {/* Dark mode logo */}
+          <img
+            src="https://i.ibb.co.com/fhLBtH4/darklogo.png"
+            className="h-20 hidden dark:block"
+            alt="Company Logo Dark"
+          />
         </div>
-
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-none">
           <ul className="menu gap-6 menu-horizontal text-[20px] px-1">
-            <li><NavLink to="/" style={navLinkStyle}>Home</NavLink></li>
-            <li><NavLink to="/about" style={navLinkStyle}>About Us</NavLink></li>
+            <li 
+              onMouseEnter={() => handleLinkHover('home')}
+              onMouseLeave={handleLinkLeave}
+              className="relative"
+            >
+              <NavLink to="/" style={navLinkStyle}>
+                Home
+                {hoveredPath === 'home' && (
+                 <div className="absolute -top-4 -left-4">
+                 <img 
+                   src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
+                   className="h-7 dark:hidden" 
+                   alt="hover indicator" 
+                 />
+                 <img 
+                   src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
+                   className="h-7 hidden dark:block" 
+                   alt="dark hover indicator" 
+                 />
+               </div>
+                )}
+              </NavLink>
+            </li>
+            
+            <li 
+              onMouseEnter={() => handleLinkHover('about')}
+              onMouseLeave={handleLinkLeave}
+              className="relative"
+            >
+              <NavLink to="/about" style={navLinkStyle}>
+                About Us
+                {hoveredPath === 'about' && (
+                  <div className="absolute -top-4 -left-4">
+                  <img 
+                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
+                    className="h-7 dark:hidden" 
+                    alt="hover indicator" 
+                  />
+                  <img 
+                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
+                    className="h-7 hidden dark:block" 
+                    alt="dark hover indicator" 
+                  />
+                </div>
+                )}
+              </NavLink>
+            </li>
 
             <li
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
+              onMouseEnter={() => {
+                setHovered(true);
+                handleLinkHover('services');
+              }}
+              onMouseLeave={() => {
+                setHovered(false);
+                handleLinkLeave();
+              }}
               className="relative"
             >
               <span
@@ -57,6 +123,20 @@ const Navbar = () => {
                   }`}
               >
                 Services<span className="text-[30px]"><MdOutlineArrowDropDown /></span>
+                {hoveredPath === 'services' && (
+                  <div className="absolute -top-4 -left-4">
+                  <img 
+                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
+                    className="h-7 dark:hidden" 
+                    alt="hover indicator" 
+                  />
+                  <img 
+                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
+                    className="h-7 hidden dark:block" 
+                    alt="dark hover indicator" 
+                  />
+                </div>
+                )}
               </span>
 
               {/* Dropdown */}
@@ -122,8 +202,14 @@ const Navbar = () => {
             </li>
 
             <li
-              onMouseEnter={() => setExpertiseHovered(true)}
-              onMouseLeave={() => setExpertiseHovered(false)}
+              onMouseEnter={() => {
+                setExpertiseHovered(true);
+                handleLinkHover('expertise');
+              }}
+              onMouseLeave={() => {
+                setExpertiseHovered(false);
+                handleLinkLeave();
+              }}
               className="relative"
             >
               <span
@@ -131,6 +217,20 @@ const Navbar = () => {
                   }`}
               >
                 Expertise<span className="text-[30px]"><MdOutlineArrowDropDown /></span>
+                {hoveredPath === 'expertise' && (
+                  <div className="absolute -top-4 -left-4">
+                  <img 
+                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
+                    className="h-7 dark:hidden" 
+                    alt="hover indicator" 
+                  />
+                  <img 
+                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
+                    className="h-7 hidden dark:block" 
+                    alt="dark hover indicator" 
+                  />
+                </div>
+                )}
               </span>
 
               {/* Dropdown */}
@@ -205,8 +305,53 @@ const Navbar = () => {
               )}
             </li>
 
-            <li><NavLink to="/products" style={navLinkStyle}>Products</NavLink></li>
-            <li><NavLink to="/contact" style={navLinkStyle}>Contact Us</NavLink></li>
+            <li 
+              onMouseEnter={() => handleLinkHover('products')}
+              onMouseLeave={handleLinkLeave}
+              className="relative"
+            >
+              <NavLink to="/products" style={navLinkStyle}>
+                Products
+                {hoveredPath === 'products' && (
+                  <div className="absolute -top-4 -left-4">
+                    <img 
+                      src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
+                      className="h-7 dark:hidden" 
+                      alt="hover indicator" 
+                    />
+                    <img 
+                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
+                      className="h-7 hidden dark:block" 
+                      alt="dark hover indicator" 
+                    />
+                  </div>
+                )}
+              </NavLink>
+            </li>
+            
+            <li 
+              onMouseEnter={() => handleLinkHover('contact')}
+              onMouseLeave={handleLinkLeave}
+              className="relative"
+            >
+              <NavLink to="/contact" style={navLinkStyle}>
+                Contact Us
+                {hoveredPath === 'contact' && (
+                  <div className="absolute -top-4 -left-4">
+                  <img 
+                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
+                    className="h-7 dark:hidden" 
+                    alt="hover indicator" 
+                  />
+                  <img 
+                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
+                    className="h-7 hidden dark:block" 
+                    alt="dark hover indicator" 
+                  />
+                </div>
+                )}
+              </NavLink>
+            </li>
           </ul>
         </div>
 
