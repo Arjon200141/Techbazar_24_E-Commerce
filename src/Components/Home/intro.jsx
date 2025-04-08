@@ -5,7 +5,6 @@ const Intro = () => {
     const svg1Ref = useRef();
     const svg2Ref = useRef();
     const [activeSVG, setActiveSVG] = useState(1);
-    // 1 or 2
     const headingRef = useRef();
     const text = "We specialize in digital transformation";
     const duration = 0.05; // Time per character
