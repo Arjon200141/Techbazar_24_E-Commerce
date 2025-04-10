@@ -11,6 +11,7 @@ const navLinkStyle = ({ isActive }) => ({
   borderBottom: isActive ? "3px solid #0C9DCA" : "none",
   paddingBottom: "4px",
   textDecoration: "none",
+  backgroundColor:"rgba(0,0,0,0)"
 });
 
 const Navbar = () => {
@@ -59,7 +60,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-none">
           <ul className="menu gap-6 menu-horizontal text-[20px] px-1">
-            <li 
+            <li
               onMouseEnter={() => handleLinkHover('home')}
               onMouseLeave={handleLinkLeave}
               className="relative"
@@ -67,23 +68,23 @@ const Navbar = () => {
               <NavLink to="/" style={navLinkStyle}>
                 Home
                 {hoveredPath === 'home' && (
-                 <div className="absolute -top-4 -left-4">
-                 <img 
-                   src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
-                   className="h-7 dark:hidden" 
-                   alt="hover indicator" 
-                 />
-                 <img 
-                   src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
-                   className="h-7 hidden dark:block" 
-                   alt="dark hover indicator" 
-                 />
-               </div>
+                  <div className="absolute top-2 -left-4">
+                    <img
+                      src="https://i.ibb.co.com/CsYL6ByS/hover.png"
+                      className="h-7 dark:hidden"
+                      alt="hover indicator"
+                    />
+                    <img
+                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png"
+                      className="h-7 hidden dark:block"
+                      alt="dark hover indicator"
+                    />
+                  </div>
                 )}
               </NavLink>
             </li>
-            
-            <li 
+
+            <li
               onMouseEnter={() => handleLinkHover('about')}
               onMouseLeave={handleLinkLeave}
               className="relative"
@@ -91,18 +92,18 @@ const Navbar = () => {
               <NavLink to="/about" style={navLinkStyle}>
                 About Us
                 {hoveredPath === 'about' && (
-                  <div className="absolute -top-4 -left-4">
-                  <img 
-                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
-                    className="h-7 dark:hidden" 
-                    alt="hover indicator" 
-                  />
-                  <img 
-                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
-                    className="h-7 hidden dark:block" 
-                    alt="dark hover indicator" 
-                  />
-                </div>
+                  <div className="absolute top-2 -left-4">
+                    <img
+                      src="https://i.ibb.co.com/CsYL6ByS/hover.png"
+                      className="h-7 dark:hidden"
+                      alt="hover indicator"
+                    />
+                    <img
+                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png"
+                      className="h-7 hidden dark:block"
+                      alt="dark hover indicator"
+                    />
+                  </div>
                 )}
               </NavLink>
             </li>
@@ -118,26 +119,29 @@ const Navbar = () => {
               }}
               className="relative"
             >
-              <span
+              <NavLink style={navLinkStyle} to="/service"
+
+              
                 className={`text-[20px] font-semibold cursor-pointer pb-1 ${isServicePath ? "font-bold border-b-4 border-[#0C9DCA]" : ""
                   }`}
               >
                 Services<span className="text-[30px]"><MdOutlineArrowDropDown /></span>
                 {hoveredPath === 'services' && (
-                  <div className="absolute -top-4 -left-4">
-                  <img 
-                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
-                    className="h-7 dark:hidden" 
-                    alt="hover indicator" 
-                  />
-                  <img 
-                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
-                    className="h-7 hidden dark:block" 
-                    alt="dark hover indicator" 
-                  />
-                </div>
+                  <div className="absolute top-2 -left-4">
+                    <img
+                      src="https://i.ibb.co.com/CsYL6ByS/hover.png"
+                      className="h-7 dark:hidden"
+                      alt="hover indicator"
+                    />
+                    <img
+                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png"
+                      className="h-7 hidden dark:block"
+                      alt="dark hover indicator"
+                    />
+                  </div>
                 )}
-              </span>
+              
+              </NavLink>
 
               {/* Dropdown */}
               {hovered && (
@@ -173,12 +177,17 @@ const Navbar = () => {
                         </li>
                         <li>
                           <NavLink to="/services/cloud-solutions" className="flex items-center text-black dark:text-white font-medium hover:font-semibold hover:text-[#0C9DCA]">
-                            <IoIosArrowForward className="mr-1" /> Cloud Solutions
+                            <IoIosArrowForward className="mr-1" /> Digital Marketing
                           </NavLink>
                         </li>
                         <li>
                           <NavLink to="/services/creative-design" className="flex items-center text-black dark:text-white font-medium hover:font-semibold hover:text-[#0C9DCA]">
                             <IoIosArrowForward className="mr-1" /> Creative Design
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/services/creative-design" className="flex items-center text-black dark:text-white font-medium hover:font-semibold hover:text-[#0C9DCA]">
+                            <IoIosArrowForward className="mr-1" /> It Consultancy Service
                           </NavLink>
                         </li>
                       </ul>
@@ -212,26 +221,26 @@ const Navbar = () => {
               }}
               className="relative"
             >
-              <span
+              <NavLink to="/expertise" style={navLinkStyle}
                 className={`text-[20px] font-semibold cursor-pointer pb-1 ${isExpertisePath ? "font-bold border-b-4 border-[#0C9DCA]" : ""
                   }`}
               >
                 Expertise<span className="text-[30px]"><MdOutlineArrowDropDown /></span>
                 {hoveredPath === 'expertise' && (
-                  <div className="absolute -top-4 -left-4">
-                  <img 
-                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
-                    className="h-7 dark:hidden" 
-                    alt="hover indicator" 
-                  />
-                  <img 
-                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
-                    className="h-7 hidden dark:block" 
-                    alt="dark hover indicator" 
-                  />
-                </div>
+                  <div className="absolute top-2 -left-4">
+                    <img
+                      src="https://i.ibb.co.com/CsYL6ByS/hover.png"
+                      className="h-7 dark:hidden"
+                      alt="hover indicator"
+                    />
+                    <img
+                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png"
+                      className="h-7 hidden dark:block"
+                      alt="dark hover indicator"
+                    />
+                  </div>
                 )}
-              </span>
+              </NavLink>
 
               {/* Dropdown */}
               {expertiseHovered && (
@@ -305,7 +314,7 @@ const Navbar = () => {
               )}
             </li>
 
-            <li 
+            <li
               onMouseEnter={() => handleLinkHover('products')}
               onMouseLeave={handleLinkLeave}
               className="relative"
@@ -313,23 +322,23 @@ const Navbar = () => {
               <NavLink to="/products" style={navLinkStyle}>
                 Products
                 {hoveredPath === 'products' && (
-                  <div className="absolute -top-4 -left-4">
-                    <img 
-                      src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
-                      className="h-7 dark:hidden" 
-                      alt="hover indicator" 
+                  <div className="absolute top-2 -left-4">
+                    <img
+                      src="https://i.ibb.co.com/CsYL6ByS/hover.png"
+                      className="h-7 dark:hidden"
+                      alt="hover indicator"
                     />
-                    <img 
-                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
-                      className="h-7 hidden dark:block" 
-                      alt="dark hover indicator" 
+                    <img
+                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png"
+                      className="h-7 hidden dark:block"
+                      alt="dark hover indicator"
                     />
                   </div>
                 )}
               </NavLink>
             </li>
-            
-            <li 
+
+            <li
               onMouseEnter={() => handleLinkHover('contact')}
               onMouseLeave={handleLinkLeave}
               className="relative"
@@ -337,18 +346,18 @@ const Navbar = () => {
               <NavLink to="/contact" style={navLinkStyle}>
                 Contact Us
                 {hoveredPath === 'contact' && (
-                  <div className="absolute -top-4 -left-4">
-                  <img 
-                    src="https://i.ibb.co.com/CsYL6ByS/hover.png" 
-                    className="h-7 dark:hidden" 
-                    alt="hover indicator" 
-                  />
-                  <img 
-                    src="https://i.ibb.co.com/WwDyDQY/darkhover.png" 
-                    className="h-7 hidden dark:block" 
-                    alt="dark hover indicator" 
-                  />
-                </div>
+                  <div className="absolute top-2 -left-4">
+                    <img
+                      src="https://i.ibb.co.com/CsYL6ByS/hover.png"
+                      className="h-7 dark:hidden"
+                      alt="hover indicator"
+                    />
+                    <img
+                      src="https://i.ibb.co.com/WwDyDQY/darkhover.png"
+                      className="h-7 hidden dark:block"
+                      alt="dark hover indicator"
+                    />
+                  </div>
                 )}
               </NavLink>
             </li>
@@ -376,8 +385,8 @@ const Navbar = () => {
           <div className="px-4 py-2">
             <ul className="space-y-4">
               <li>
-                <NavLink 
-                  to="/" 
+                <NavLink
+                  to="/"
                   className="block py-2 text-[#0C9DCA] text-lg font-medium"
                   onClick={toggleMobileMenu}
                 >
@@ -385,8 +394,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/about" 
+                <NavLink
+                  to="/about"
                   className="block py-2 text-[#0C9DCA] text-lg font-medium"
                   onClick={toggleMobileMenu}
                 >
@@ -396,7 +405,7 @@ const Navbar = () => {
 
               {/* Services Dropdown */}
               <li>
-                <div 
+                <div
                   className="flex items-center justify-between py-2 text-[#0C9DCA] text-lg font-medium cursor-pointer"
                   onClick={() => setHovered(!hovered)}
                 >
@@ -406,8 +415,8 @@ const Navbar = () => {
                 {hovered && (
                   <ul className="pl-4 space-y-3 mt-2">
                     <li>
-                      <NavLink 
-                        to="/services/custom-software" 
+                      <NavLink
+                        to="/services/custom-software"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -415,8 +424,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/services/mobile-app" 
+                      <NavLink
+                        to="/services/mobile-app"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -424,8 +433,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/services/ui-ux" 
+                      <NavLink
+                        to="/services/ui-ux"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -433,8 +442,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/services/qa-testing" 
+                      <NavLink
+                        to="/services/qa-testing"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -442,8 +451,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/services/ai-ml" 
+                      <NavLink
+                        to="/services/ai-ml"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -451,8 +460,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/services/cloud-solutions" 
+                      <NavLink
+                        to="/services/cloud-solutions"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -460,8 +469,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/services/creative-design" 
+                      <NavLink
+                        to="/services/creative-design"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -474,7 +483,7 @@ const Navbar = () => {
 
               {/* Expertise Dropdown */}
               <li>
-                <div 
+                <div
                   className="flex items-center justify-between py-2 text-[#0C9DCA] text-lg font-medium cursor-pointer"
                   onClick={() => setExpertiseHovered(!expertiseHovered)}
                 >
@@ -484,8 +493,8 @@ const Navbar = () => {
                 {expertiseHovered && (
                   <ul className="pl-4 space-y-3 mt-2">
                     <li>
-                      <NavLink 
-                        to="/expertise/application-development" 
+                      <NavLink
+                        to="/expertise/application-development"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -493,8 +502,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/expertise/digital-transformation" 
+                      <NavLink
+                        to="/expertise/digital-transformation"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -502,8 +511,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/expertise/business-analysis" 
+                      <NavLink
+                        to="/expertise/business-analysis"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -511,8 +520,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/expertise/digital-product-design" 
+                      <NavLink
+                        to="/expertise/digital-product-design"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -520,8 +529,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/expertise/data-management" 
+                      <NavLink
+                        to="/expertise/data-management"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -529,8 +538,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/expertise/iot" 
+                      <NavLink
+                        to="/expertise/iot"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -538,8 +547,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/expertise/devops" 
+                      <NavLink
+                        to="/expertise/devops"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -547,8 +556,8 @@ const Navbar = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink 
-                        to="/expertise/it-support" 
+                      <NavLink
+                        to="/expertise/it-support"
                         className="block py-1 text-[#0C9DCA] text-base font-medium"
                         onClick={toggleMobileMenu}
                       >
@@ -560,8 +569,8 @@ const Navbar = () => {
               </li>
 
               <li>
-                <NavLink 
-                  to="/products" 
+                <NavLink
+                  to="/products"
                   className="block py-2 text-[#0C9DCA] text-lg font-medium"
                   onClick={toggleMobileMenu}
                 >
@@ -569,8 +578,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink 
-                  to="/contact" 
+                <NavLink
+                  to="/contact"
                   className="block py-2 text-[#0C9DCA] text-lg font-medium"
                   onClick={toggleMobileMenu}
                 >

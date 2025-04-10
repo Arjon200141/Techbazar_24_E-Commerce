@@ -7,9 +7,9 @@ const Footer = () => {
     };
 
     return (
-        <>
+        <div className='relative'>
             {/* Scroll to Top Button */}
-            <div className="w-full flex justify-center md:mb-[-32px] z-50 relative">
+            <div className="w-full flex justify-center -top-7 absolute z-50 ">
                 <button
                     onClick={scrollToTop}
                     className="bg-gradient-to-b from-[#0077b6] to-[#60c7fe] hover:bg-[#005f8d] text-white text-2xl p-4 rounded-full shadow-lg transition-all duration-300"
@@ -86,7 +86,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
