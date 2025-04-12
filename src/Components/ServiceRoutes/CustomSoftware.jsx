@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CustomSoftware = () => {
     const uniques = [
         { id: "1", name: "Project Overview", image: "https://www.apisolutionsltd.com/innerPaageImg/icon/DesignResearch.svg", description: "We commence with an in-depth exploration of your project's objectives and constraints. We weave a thorough project plan that maps out timelines, milestones, and deliverables, creating a clear track forward." },
@@ -5,6 +7,12 @@ const CustomSoftware = () => {
         { id: "3", name: "Quality Fortification", image: "https://www.apisolutionsltd.com/innerPaageImg/icon/RapidPrototyping.svg", description: "We thoroughly test your software using comprehensive assessments including functionality testing and rigorous security scanning. We promptly address the limitations and ensure the best end of the product." },
         { id: "4", name: "We Provide Maintenance", image: "https://www.apisolutionsltd.com/innerPaageImg/icon/PostLaunchDesignOptimization.svg", description: "It isn't the end here. We are here to launch your product as well. Our software launch process involves careful planning, cloud migration if needed, testing for quality, data migration, user training, and ongoing support. It ensures a smooth transition to your new software solution, backed by our commitment to your success." },
     ]
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }; 
     return (
         <div className="p-20 px-32 bg-[#ecf6fcb0] dark:bg-[#1a1a1a] max-lg:p-10 max-md:p-6">
             {/* 1st Part */}
@@ -36,9 +44,11 @@ const CustomSoftware = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-8">
-                        <button className="bg-gradient-to-r from-blue-500 to-sky-400 text-lg py-3 px-6 rounded-full hover:shadow-2xl text-white font-semibold max-md:text-base max-md:py-2 max-md:px-4">SCHEDULE A DESIGN CONSULTATION</button>
-                    </div>
+                    <Link onClick={scrollToTop} to="/contact_us">
+                        <div className="mt-8">
+                            <button className="bg-gradient-to-r from-blue-500 to-sky-400 text-lg py-3 px-6 rounded-full hover:shadow-2xl text-white font-semibold max-md:text-base max-md:py-2 max-md:px-4">SCHEDULE A DESIGN CONSULTATION</button>
+                        </div>
+                    </Link>
                 </div>
                 <div className="col-span-1 relative max-lg:mt-8">
                     <div className="relative max-lg:flex max-lg:justify-center">

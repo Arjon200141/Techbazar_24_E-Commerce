@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MobileApp = () => {
     const uniques = [
         { id: "1", name: "Increase brand awareness", image: "https://www.apisolutionsltd.com/innerPaageImg/icon/DesignResearch.svg", description: "A well-designed app directly engages customers with your brand whenever they use their phones. It builds familiarity and loyalty with your brand." },
@@ -8,6 +10,12 @@ const MobileApp = () => {
 
         { id: "4", name: "Collect customer data", image: "https://www.apisolutionsltd.com/innerPaageImg/icon/PostLaunchDesignOptimization.svg", description: "Mobile apps can gather valuable insights about your customers, including demographics, location, behaviors, and preferences. This data helps drive strategy." },
     ]
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }; 
     return (
         <div className="p-20 px-32 bg-[#ecf6fcb0] dark:bg-[#1a1a1a] max-lg:p-10 max-md:p-6">
             {/* 1st Part */}
@@ -44,9 +52,11 @@ const MobileApp = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-8">
-                        <button className="bg-gradient-to-r from-blue-500 to-sky-400 text-lg py-3 px-6 rounded-full hover:shadow-2xl text-white font-semibold max-md:text-base max-md:py-2 max-md:px-4">SCHEDULE A DESIGN CONSULTATION</button>
-                    </div>
+                    <Link onClick={scrollToTop} to="/contact_us">
+                        <div className="mt-8">
+                            <button className="bg-gradient-to-r from-blue-500 to-sky-400 text-lg py-3 px-6 rounded-full hover:shadow-2xl text-white font-semibold max-md:text-base max-md:py-2 max-md:px-4">SCHEDULE A DESIGN CONSULTATION</button>
+                        </div>
+                    </Link>
                 </div>
                 <div className="col-span-1 relative max-lg:mt-8">
                     <div className="relative max-lg:flex max-lg:justify-center">

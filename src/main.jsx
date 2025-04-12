@@ -14,10 +14,14 @@ import Expertise from './Components/Expertise/Expertise';
 import CustomSoftware from './Components/ServiceRoutes/CustomSoftware';
 import MobileApp from './Components/ServiceRoutes/MobileApp';
 import UI from './Components/ServiceRoutes/UI';
+import QA from './Components/ServiceRoutes/QA';
 import ContactUs from './Components/Contact Us/ContactUs';
 import SayHelloLocations from './Components/Contact Us/SayHelloLocations';
 import EstimateProject from './Components/Contact Us/EstimateProject';
 import RequestSchedule from './Components/Contact Us/RequestSchedule';
+import Machine from './Components/ServiceRoutes/Machine';
+import Digital from './Components/ServiceRoutes/Digital';
+import Creative from './Components/ServiceRoutes/Creative';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +51,22 @@ const router = createBrowserRouter([
       {
         path: "/services/ui-ux",
         element: <UI></UI>
+      },
+      {
+        path:"/services/qa-testing",
+        element:<QA></QA>
+      },
+      {
+        path:"/services/ai-ml",
+        element:<Machine></Machine>
+      },
+      {
+        path:"/services/digital",
+        element: <Digital></Digital>
+      },
+      {
+        path:"/services/creative-design",
+        element:<Creative></Creative>
       },
       {
         path: "/expertise",

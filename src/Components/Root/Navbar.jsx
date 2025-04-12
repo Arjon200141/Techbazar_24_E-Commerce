@@ -176,7 +176,7 @@ const Navbar = () => {
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/services/cloud-solutions" className="flex items-center text-black dark:text-white font-medium hover:font-semibold hover:text-[#0C9DCA]">
+                          <NavLink to="/services/digital" className="flex items-center text-black dark:text-white font-medium hover:font-semibold hover:text-[#0C9DCA]">
                             <IoIosArrowForward className="mr-1" /> Digital Marketing
                           </NavLink>
                         </li>

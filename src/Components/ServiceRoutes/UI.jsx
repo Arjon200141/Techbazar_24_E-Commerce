@@ -1,4 +1,12 @@
+import { Link } from "react-router-dom";
+
 const UI = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }; 
     const uniques = [
         { id: "1", name: "Intuitive User Journeys", image: "https://www.apisolutionsltd.com/innerPaageImg/icon/DesignResearch.svg", description: "Create smooth experiences through user-centric design, ensuring easy navigation and interactions that align with your audience's expectations." },
 
@@ -46,9 +54,11 @@ const UI = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-8">
-                        <button className="bg-gradient-to-r from-blue-500 to-sky-400 text-lg py-3 px-6 rounded-full hover:shadow-2xl text-white font-semibold max-md:text-base max-md:py-2 max-md:px-4">SCHEDULE A DESIGN CONSULTATION</button>
-                    </div>
+                    <Link onClick={scrollToTop} to="/contact_us">
+                        <div className="mt-8">
+                            <button className="bg-gradient-to-r from-blue-500 to-sky-400 text-lg py-3 px-6 rounded-full hover:shadow-2xl text-white font-semibold max-md:text-base max-md:py-2 max-md:px-4">SCHEDULE A DESIGN CONSULTATION</button>
+                        </div>
+                    </Link>
                 </div>
                 <div className="col-span-1 relative max-lg:mt-8">
                     <div className="relative max-lg:flex max-lg:justify-center">
