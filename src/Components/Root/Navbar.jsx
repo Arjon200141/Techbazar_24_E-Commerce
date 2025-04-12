@@ -343,7 +343,7 @@ const Navbar = () => {
               onMouseLeave={handleLinkLeave}
               className="relative"
             >
-              <NavLink to="/contact" style={navLinkStyle}>
+              <NavLink to="/contact_us" style={navLinkStyle}>
                 Contact Us
                 {hoveredPath === 'contact' && (
                   <div className="absolute top-2 -left-4">

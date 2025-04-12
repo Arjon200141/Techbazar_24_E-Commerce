@@ -9,7 +9,6 @@ const Values = () => {
                 OUR CORE VALUES
                 </p>
                 <h2 className='font-extrabold text-[#0C9DCA] dark:text-cyan-300 text-xl sm:text-2xl md:text-3xl lg:text-5xl absolute pl-3 sm:pl-4 md:pl-8 tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-1.80px]'>
-                
                 Our Core Values
                 </h2>
             </div>
@@ -25,7 +24,7 @@ const Values = () => {
                             <div className="absolute -top-14 left-1/2 -translate-x-1/2 text-5xl font-bold text-gray-300 z-0">
                                 01
                             </div>
-                            <div className="relative bg-gradient-to-r from-[#005481] to-[#51B8E0] rounded-full w-48 h-48 mx-auto shadow-2xl flex items-center justify-center text-center text-lg font-bold">
+                            <div className="relative  bg-gradient-to-r from-[#005481] to-[#51B8E0] rounded-full w-48 h-48 mx-auto shadow-2xl flex items-center justify-center text-center text-lg font-bold">
                                 <span>Accepting Challenge</span>
                             </div>
                             <div className="relative mt-6 font-semibold text-black">
