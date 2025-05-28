@@ -52,7 +52,7 @@ const Footer = () => {
 
                         {/* Copyright - responsive text size and dark mode text */}
                         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 order-3 md:order-none text-center md:text-left">
-                            Copyright © {new Date().getFullYear()} - All right reserved by TechBazar24
+                            Copyright © {new Date().getFullYear()} - All right reserved by TechBazar24.
                         </p>
 
                         {/* Social Icons - centered on mobile */}
