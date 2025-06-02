@@ -1,0 +1,324 @@
+[
+  {
+    "product_name": "Smart Thermostat",
+    "model": "T-4000",
+    "brand": "HomeTech",
+    "sku": "HT-001",
+    "category": "Smart Home",
+    "price": {
+      "current": 199.99,
+      "original": 249.99,
+      "currency": "USD"
+    },
+    "warranty": "2 Years",
+    "availability": "TechStore USA",
+    "technical_specifications": {
+      "temperature_range": "40°F - 90°F",
+      "connectivity": "WiFi, Zigbee",
+      "power_supply": "AC 24V",
+      "weight": 0.5,
+      "dimensions_cm": {
+        "width": 8.5,
+        "length": 8.5,
+        "height": 3.5
+      }
+    },
+    "features": [
+      "Remote temperature control",
+      "Energy usage reports"
+    ],
+    "applications": [
+      "Home heating and cooling optimization"
+    ],
+    "id": 1
+  },
+  {
+    "product_name": "Smart Bulb",
+    "model": "SB-200",
+    "brand": "LumiLight",
+    "sku": "LL-001",
+    "category": "Lighting",
+    "price": {
+      "current": 29.99,
+      "original": 39.99,
+      "currency": "USD"
+    },
+    "warranty": "1 Year",
+    "availability": "Online",
+    "technical_specifications": {
+      "brightness": "800 Lumens",
+      "connectivity": "WiFi",
+      "color_options": "RGB",
+      "weight": 0.2,
+      "dimensions_cm": {
+        "width": 6.0,
+        "length": 6.0,
+        "height": 11.0
+      }
+    },
+    "features": [
+      "Voice control",
+      "Color changing"
+    ],
+    "applications": [
+      "Home lighting automation"
+    ],
+    "id": 2
+  },
+  {
+    "product_name": "Smart Security Camera",
+    "model": "SC-100",
+    "brand": "SecuVision",
+    "sku": "SV-002",
+    "category": "Security",
+    "price": {
+      "current": 149.99,
+      "original": 199.99,
+      "currency": "USD"
+    },
+    "warranty": "1 Year",
+    "availability": "TechStore USA",
+    "technical_specifications": {
+      "resolution": "1080p Full HD",
+      "connectivity": "WiFi, Ethernet",
+      "night_vision": "Yes",
+      "weight": 0.3,
+      "dimensions_cm": {
+        "width": 7.0,
+        "length": 7.0,
+        "height": 14.0
+      }
+    },
+    "features": [
+      "Motion detection alerts",
+      "Two-way audio"
+    ],
+    "applications": [
+      "Home and office security"
+    ],
+    "id": 3
+  },
+  {
+    "product_name": "Smart Fitness Tracker",
+    "model": "FT-50",
+    "brand": "FitTrack",
+    "sku": "FT-003",
+    "category": "Wearable",
+    "price": {
+      "current": 99.99,
+      "original": 129.99,
+      "currency": "USD"
+    },
+    "warranty": "2 Years",
+    "availability": "FitStore",
+    "technical_specifications": {
+      "battery_life": "7 days",
+      "connectivity": "Bluetooth",
+      "water_resistance": "5 ATM",
+      "weight": 0.1,
+      "dimensions_cm": {
+        "width": 2.0,
+        "length": 4.5,
+        "height": 1.0
+      }
+    },
+    "features": [
+      "Heart rate monitor",
+      "Sleep tracking"
+    ],
+    "applications": [
+      "Fitness and health monitoring"
+    ],
+    "id": 4
+  },
+  {
+    "product_name": "Smart Door Lock",
+    "model": "DL-300",
+    "brand": "LockTech",
+    "sku": "LT-004",
+    "category": "Security",
+    "price": {
+      "current": 199.99,
+      "original": 249.99,
+      "currency": "USD"
+    },
+    "warranty": "1 Year",
+    "availability": "HomeSecurity",
+    "technical_specifications": {
+      "power_supply": "4 AA Batteries",
+      "connectivity": "Bluetooth, WiFi",
+      "weight": 1.2,
+      "dimensions_cm": {
+        "width": 8.5,
+        "length": 8.5,
+        "height": 5.0
+      }
+    },
+    "features": [
+      "Remote access",
+      "Auto-lock feature"
+    ],
+    "applications": [
+      "Home security"
+    ],
+    "id": 5
+  },
+  {
+    "product_name": "Smart Air Quality Monitor",
+    "model": "AQ-500",
+    "brand": "CleanAir",
+    "sku": "CA-005",
+    "category": "Health",
+    "price": {
+      "current": 89.99,
+      "original": 119.99,
+      "currency": "USD"
+    },
+    "warranty": "1 Year",
+    "availability": "TechStore",
+    "technical_specifications": {
+      "sensors": "PM2.5, CO2, VOC",
+      "connectivity": "WiFi",
+      "weight": 0.4,
+      "dimensions_cm": {
+        "width": 10.0,
+        "length": 10.0,
+        "height": 5.0
+      }
+    },
+    "features": [
+      "Real-time air quality readings",
+      "Mobile alerts"
+    ],
+    "applications": [
+      "Indoor air quality monitoring"
+    ],
+    "id": 6
+  },
+  {
+    "product_name": "Smart Water Leak Detector",
+    "model": "WL-600",
+    "brand": "WaterGuard",
+    "sku": "WG-006",
+    "category": "Security",
+    "price": {
+      "current": 39.99,
+      "original": 49.99,
+      "currency": "USD"
+    },
+    "warranty": "1 Year",
+    "availability": "HomeImprovement",
+    "technical_specifications": {
+      "connectivity": "WiFi",
+      "weight": 0.1,
+      "dimensions_cm": {
+        "width": 5.0,
+        "length": 5.0,
+        "height": 2.0
+      }
+    },
+    "features": [
+      "Instant leak detection alerts",
+      "Battery-operated"
+    ],
+    "applications": [
+      "Preventing water damage"
+    ],
+    "id": 7
+  },
+  {
+    "product_name": "Smart Coffee Maker",
+    "model": "CM-700",
+    "brand": "BrewMasters",
+    "sku": "BM-007",
+    "category": "Kitchen",
+    "price": {
+      "current": 149.99,
+      "original": 199.99,
+      "currency": "USD"
+    },
+    "warranty": "2 Years",
+    "availability": "Online",
+    "technical_specifications": {
+      "capacity": "12 cups",
+      "connectivity": "WiFi",
+      "weight": 1.5,
+      "dimensions_cm": {
+        "width": 25.0,
+        "length": 18.0,
+        "height": 15.0
+      }
+    },
+    "features": [
+      "Schedule brew time",
+      "Control via mobile app"
+    ],
+    "applications": [
+      "Smart kitchen automation"
+    ],
+    "id": 8
+  },
+  {
+    "product_name": "Smart Home Hub",
+    "model": "SH-900",
+    "brand": "SmartConnect",
+    "sku": "SC-008",
+    "category": "Home Automation",
+    "price": {
+      "current": 89.99,
+      "original": 129.99,
+      "currency": "USD"
+    },
+    "warranty": "1 Year",
+    "availability": "TechStore",
+    "technical_specifications": {
+      "connectivity": "Zigbee, WiFi, Z-Wave",
+      "weight": 0.5,
+      "dimensions_cm": {
+        "width": 10.0,
+        "length": 10.0,
+        "height": 3.0
+      }
+    },
+    "features": [
+      "Integrates with multiple devices",
+      "Voice control compatibility"
+    ],
+    "applications": [
+      "Centralized smart home control"
+    ],
+    "id": 9
+  },
+  {
+    "product_name": "Smart Plugs",
+    "model": "SP-200",
+    "brand": "PowerMaster",
+    "sku": "PM-009",
+    "category": "Energy Management",
+    "price": {
+      "current": 29.99,
+      "original": 39.99,
+      "currency": "USD"
+    },
+    "warranty": "1 Year",
+    "availability": "Online",
+    "technical_specifications": {
+      "connectivity": "WiFi",
+      "maximum_load": "16A",
+      "weight": 0.1,
+      "dimensions_cm": {
+        "width": 6.0,
+        "length": 6.0,
+        "height": 8.0
+      }
+    },
+    "features": [
+      "Remote control of appliances",
+      "Monitoring energy usage"
+    ],
+    "applications": [
+      "Smart energy management"
+    ],
+    "id": 10
+  }
+]

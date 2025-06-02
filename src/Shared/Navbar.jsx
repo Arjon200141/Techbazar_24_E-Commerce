@@ -15,6 +15,27 @@ const navLinkStyle = ({ isActive }) => ({
   backgroundColor: "rgba(0,0,0,0)"
 });
 
+const cartIconStyle = {
+  fontWeight: "500",
+  color: "#0C9DCA",
+  fontSize: "20px",
+  borderBottom: "none",
+  paddingBottom: "4px",
+  textDecoration: "none",
+  backgroundColor: "rgba(0,0,0,0)"
+};
+
+const logoutButtonStyle = {
+  fontWeight: "500",
+  color: "#0C9DCA",
+  fontSize: "20px",
+  borderBottom: "none",
+  paddingBottom: "4px",
+  textDecoration: "none",
+  backgroundColor: "rgba(0,0,0,0)",
+  cursor: "pointer"
+};
+
 const DropdownItem = ({ to, children, onClick }) => (
   <li>
     <NavLink
@@ -162,7 +183,7 @@ const Navbar = () => {
               <>
                 {guestLinks.map(renderDesktopNavItem)}
                 <li className="flex items-center gap-4">
-                  <NavLink to="/cart" style={navLinkStyle}>
+                  <NavLink to="/cart" style={cartIconStyle}>
                     <FaShoppingCart size={20} />
                   </NavLink>
                   {renderDesktopNavItem(loginLink)}
@@ -172,12 +193,12 @@ const Navbar = () => {
               <>
                 {userLinks.map(renderDesktopNavItem)}
                 <li>
-                  <NavLink to="/cart" style={navLinkStyle}>
+                  <NavLink to="/cart" style={cartIconStyle}>
                     <FaShoppingCart size={32} />
                   </NavLink>
                 </li>
                 <li>
-                  <button onClick={handleSignOut} style={navLinkStyle}>
+                  <button onClick={handleSignOut} style={logoutButtonStyle}>
                     <img
                       src="https://i.ibb.co.com/QvKkDNNH/logout-10976188.png"
                       alt="Logout"
@@ -190,7 +211,7 @@ const Navbar = () => {
               <>
                 {adminLinks.map(renderDesktopNavItem)}
                 <li>
-                  <button onClick={handleSignOut} style={navLinkStyle}>
+                  <button onClick={handleSignOut} style={logoutButtonStyle}>
                     <img
                       src="https://i.ibb.co.com/QvKkDNNH/logout-10976188.png"
                       alt="Logout"
